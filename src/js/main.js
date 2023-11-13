@@ -4,17 +4,13 @@ const content = document.getElementById('content');
 
 function showContent(route) {
 
-  switch (route) {
-      case '/posts':
-          content.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
-          break;
-      case '/about':
-          content.innerHTML = '<h1>About Page</h1><p>Learn more about us here.</p>';
-          break;
-      default:
-          content.innerHTML = '<h1>Not Found</h1><p>The page you requested was not found.</p>';
-          break;
-  }
+  fetch(`${route}.html`)
+    .then(response => response.text())
+    .then(content => {
+      document.getElementById('content').innerHTML = content;
+    })
+    .catch(error => console.error('Error loading content:', error));
+
 }
 
 
@@ -28,4 +24,5 @@ const links = document.querySelectorAll("ul li a");
 links.forEach((link) => {
   link.addEventListener("click", handleLinkClick);
 });
+
 
