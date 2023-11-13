@@ -1,20 +1,31 @@
 console.log("Js loaded");
 
-document.addEventListener("DOMContentLoaded", ()=> {
+const content = document.getElementById('content');
 
-// Fetch the Markdown content
-fetch("/data/1.md")
-  .then(response => response.text())
-  .then(markdown => {
-    // Convert Markdown to HTML using marked.js
-    debugger;
-    const text = marked.parse(markdown)
+function showContent(route) {
 
-    // Display the HTML content in the post-content div
-    //document.getElementById('post-content').innerHTML = html;
-  })
-  .catch(error => console.error('Error fetching the Markdown file:', error));
+  switch (route) {
+      case '/posts':
+          content.innerHTML = '<h1>Home Page</h1><p>Welcome to the Home Page!</p>';
+          break;
+      case '/about':
+          content.innerHTML = '<h1>About Page</h1><p>Learn more about us here.</p>';
+          break;
+      default:
+          content.innerHTML = '<h1>Not Found</h1><p>The page you requested was not found.</p>';
+          break;
+  }
+}
 
 
+function handleLinkClick(event) {
+  event.preventDefault(); // Prevent the default link behavior
+  const href = event.target.getAttribute("href");
+  showContent(href);
+}
 
+const links = document.querySelectorAll("ul li a");
+links.forEach((link) => {
+  link.addEventListener("click", handleLinkClick);
 });
+
