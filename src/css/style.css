@@ -43,6 +43,18 @@ body {
   box-sizing: border-box;
 }
 
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
 .post-title {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -50,7 +62,7 @@ body {
 }
 
 .post-tags {
-  margin-bottom: 10px;
+  display: flex;
 }
 
 .post-tags span {
@@ -98,3 +110,20 @@ nav > ul > li > a:hover {
 
 
 /* END OF NAVIGATION */
+
+.text-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 45rem;
+  box-sizing: border-box;
+  height: 50vh;
+}
+
+
+/* SELECTED LINK */
+
+.selected {
+  background-color: #FF8080;
+}
