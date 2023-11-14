@@ -127,3 +127,14 @@ nav > ul > li > a:hover {
 .selected {
   background-color: #FF8080;
 }
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FOOTER END */
