@@ -43,6 +43,10 @@ body {
   box-sizing: border-box;
 }
 
+.post-container:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .post-meta {
   display: flex;
   justify-content: space-between;
