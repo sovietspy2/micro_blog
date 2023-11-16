@@ -142,3 +142,21 @@ footer {
 }
 
 /* FOOTER END */
+
+/* SUBSCRIBE PANEL */
+
+aside {
+    top: 10rem;
+    position: absolute;
+    right: 10rem;
+    width: 5rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  aside {
+    display: none;
+  }
+}
+
+
+/* SUBSCRIBE PANEL */
