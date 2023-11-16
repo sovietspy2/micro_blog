@@ -92,13 +92,13 @@ main {
 
 /* NAVIGATION */
 
-nav > ul {
+nav>ul {
   display: flex;
   margin-bottom: 1rem;
   list-style: none;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   color: black;
   text-decoration: none;
   margin-right: 0.5rem;
@@ -107,7 +107,7 @@ nav > ul > li > a {
   padding: 5px 10px 5px 10px;
 }
 
-nav > ul > li > a:hover {
+nav>ul>li>a:hover {
   color: white;
   background-color: #8E5CFF;
 }
@@ -145,11 +145,48 @@ footer {
 
 /* SUBSCRIBE PANEL */
 
+body aside h3 {
+  padding: 1rem;
+}
+
+body aside form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+body aside form button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  max-width: 10rem;
+}
+
+body aside form button:hover {
+  background-color: #45a049;
+}
+
+body aside form label {
+  display: inline;
+}
+
+body aside form input {
+  display: inline;
+}
+
 aside {
-    top: 10rem;
-    position: absolute;
-    right: 10rem;
-    width: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #E488FF;
+  top: 20rem;
+  position: fixed;
+  right: 2rem;
+  width: 20rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -157,6 +194,8 @@ aside {
     display: none;
   }
 }
+
+
 
 
 /* SUBSCRIBE PANEL */
