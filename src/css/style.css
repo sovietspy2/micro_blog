@@ -157,6 +157,7 @@ body aside form {
 }
 
 body aside form button {
+  margin-top: 0.5rem;
   background-color: #4caf50;
   color: #fff;
   padding: 10px 15px;
@@ -171,22 +172,38 @@ body aside form button:hover {
   background-color: #45a049;
 }
 
-body aside form label {
-  display: inline;
+body aside form div {
+  border-radius: 8px;
+
 }
 
-body aside form input {
-  display: inline;
-}
+
 
 aside {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #E488FF;
+  background-color: hotpink;
   top: 20rem;
   position: fixed;
   right: 2rem;
   width: 20rem;
+}
+
+
+body aside div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#close {
+  background-color: red;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-height: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {
