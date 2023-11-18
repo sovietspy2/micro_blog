@@ -212,7 +212,24 @@ body aside div {
   }
 }
 
+@keyframes hideAnimation {
+  0% {
+    /* Styles at the start of the animation */
+    opacity: 1;
+  }
+  50% {
+    /* Styles at the halfway point of the animation */
+    opacity: 0.5;
+  }
+  100% {
+    /* Styles at the end of the animation */
+    opacity: 0;
+  }
+}
 
+.hide {
+  animation: hideAnimation 1s ease-in-out 0s 1;
+}
 
 
 /* SUBSCRIBE PANEL */

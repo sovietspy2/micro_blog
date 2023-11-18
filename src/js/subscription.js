@@ -9,13 +9,22 @@ export function setupSubscribe() {
 
         subscribeButton.addEventListener("click", (event) => {
             event.preventDefault();
-            console.log("cliked on subscribe")
+           
             localStorage.setItem("subscribed", true);
-            panel.style.display = "none";
+            
+            hideComponent(panel);
         });
     }
 
     subscribeCloseButton.addEventListener("click", ()=>{
-        panel.style.display = "none";
+        hideComponent(panel);
     });
+}
+
+function hideComponent(element) {
+    element.classList.add("hide");
+
+    setTimeout(function () {
+        element.style.display = 'none';
+    }, 1000);
 }
